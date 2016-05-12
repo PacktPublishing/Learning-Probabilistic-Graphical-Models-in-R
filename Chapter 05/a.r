@@ -1,0 +1,11 @@
+x=seq(-10,10,0.1)
+y=1.9*dnorm(x,0.9,2.6)
+cord.x <- c(-10,x,-10)
+cord.y <- c(  0,y,0)
+plot(y,xlim=c(-10,10),ylim=c(0,0.5),t='l')
+polygon(cord.x,cord.y,col='grey')
+
+cord2.x <- c(-10,x,-10)
+cord2.y <- c(0,0.35*dnorm(x,-2,1)+0.65*dnorm(x,2,1),0)
+#curve(         0.35*dnorm(x,-2,1)+0.65*dnorm(x,2,1),xlim=c(-10,10))
+polygon(cord2.x,cord2.y,col='white')
